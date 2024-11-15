@@ -1,0 +1,46 @@
+<section class="shop_section wow fadeInUp" id="section2">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Latest Products
+            </h2>
+        </div>
+        <div class="row">
+            @for (item of productList; track item._id) {
+            <div class="col-sm-6 col-md-4 col-lg-3 wow fadeInUp">
+                <div class="box">
+                    <a [routerLink]="['/productsingle',item?.productDetails]">
+                        <div class="img-box">
+                            <img [src]="item.imagePath" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h6>
+                                {{item.title}}
+                            </h6>
+                            <h6 *ngIf="item.price == 'unavailable' ? false:true">
+                                Price
+                                <span>
+                                    {{item.price| currency:'USD':'symbol'}}
+                                </span>
+                            </h6>
+                        </div>
+                        <div class="new" *ngIf="item.latest=='YES'?true:false">
+                            <span>
+                                {{item.latest == "YES" ?"NEW":""}}
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            } @empty {
+            <li>There are no items.</li>
+            }
+
+        </div>
+        <div class="btn-box">
+            <a href="">
+                View All Products
+            </a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,28 @@
+<!-- Carousel Start -->
+<div id="section0" class="container-fluid p-0 pb-5">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        @for (item of bannerList; track item.title){
+        <div ngxSlickItem class="slide">
+            <div class="owl-carousel header-carousel position-relative">
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid" [src]="item.imagePath" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                        style="background: rgba(6, 3, 21, .5);">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{item?.title}}</h5>
+                                    <h1 class="display-3 text-white animated slideInDown mb-4">{{item.description}}<span
+                                            class="text-primary"></span></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        }
+    </ngx-slick-carousel>
+</div>
+<!-- Carousel End -->

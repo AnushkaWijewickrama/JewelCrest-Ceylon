@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="gem-product-page wow fadeInUp">
+    <div class="gem-product-images" (click)="imageEvent()">
+        <div class="gem-main-image">
+            <img [src]="selectedImage" alt="Main Gem Image" id="main-gem-image">
+        </div>
+        <div class="gem-thumbnail-images wow fadeInUp">
+            @for (item of productSingleObject?.imagePath; track item) {
+            <img [src]="item" alt="Gem Image 2" class="thumbnail">
+            } @empty {
+            <li>There are no items.</li>
+            }
+        </div>
+
+
+    </div>
+
+    <div class="gem-product-details wow fadeInUp">
+        <h1 class="gem-product-title">{{productSingleObject?.title}}</h1>
+        <p *ngIf="productSingleObject?.price == 'unavailable'?false:true" class="gem-product-price">
+            {{productSingleObject?.price | currency:'USD':'symbol'}}</p>
+
+        <p class="gem-product-description" [innerHTML]="productSingleObject?.longDescription">
+        </p>
+
+        <div class="gem-product-info">
+            <p><strong>Carat :</strong> {{ productSingleObject?.carat}}</p>
+            <p><strong>Clarity :</strong> {{ productSingleObject?.clarity}}</p>
+            <p><strong>Cut :</strong> {{ productSingleObject?.cut}}</p>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

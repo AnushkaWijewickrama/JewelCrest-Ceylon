@@ -1,0 +1,130 @@
+.gem-product-page {
+  display: flex;
+  margin: 100px auto;
+  padding: 20px;
+  // background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+  // box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  // border-radius: 15px;
+  overflow: hidden;
+}
+
+.gem-product-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+}
+
+.gem-thumbnail-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  margin: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail.active {
+  border: 3px solid #16a085;
+}
+
+.gem-main-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gem-product-details {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gem-product-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.gem-product-price {
+  font-size: 26px;
+  color: #c0392b;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.gem-product-description {
+  font-size: 18px;
+  color: #7f8c8d;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.gem-product-info p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.gem-product-info strong {
+  color: #34495e;
+  font-weight: bold;
+}
+
+.gem-product-actions {
+  margin-top: 30px;
+}
+
+.gem-add-to-cart {
+  background-color: #16a085;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(22, 160, 133, 0.4);
+}
+
+.gem-add-to-cart:hover {
+  background-color: #1abc9c;
+  box-shadow: 0 8px 20px rgba(26, 188, 156, 0.5);
+}
+
+@media (max-width: 768px) {
+  .gem-product-page {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gem-product-images {
+    margin-bottom: 30px;
+  }
+
+  .gem-product-details {
+    margin-left: 0;
+  }
+
+  .gem-thumbnail-images {
+    flex-wrap: wrap;
+  }
+
+  .thumbnail {
+    margin-bottom: 10px;
+  }
+}

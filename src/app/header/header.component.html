@@ -1,0 +1,29 @@
+<header class="header_section  wow fadeInUp" style="background-color: #160E0B;">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg custom_nav-container">
+      <a class="navbar-brand" routerLink="/">
+        <span>
+          JewelCrest Ceylon
+        </span>
+      </a>
+      <div class="" id="">
+        <div class="custom_menu-btn">
+          <button (click)="openNav()">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+          <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <a (click)="scrollToSection('section0')">Home</a>
+              <a (click)="scrollToSection('section1')">About</a>
+              <a (click)="scrollToSection('section2')">Shop</a>
+              <a (click)="scrollToSection('section3')">Offers</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</header>
